@@ -1,0 +1,30 @@
+
+// Web colors
+$color1: #EEEEEE;
+$color2: #00ADB5;
+$color3: #393E46;
+$color4: #1a1f25;
+$color5: #FFF7AB;
+$color6: #FFB0AB;
+
+// Background Colors
+$bgColor1: rgba($color: black, $alpha: 0.5);
+
+// Typography - Font Family
+$fontFamilyPrimary: 'Fira-Code';
+$fontFamilySecondary: 'Monoid';
+$fontFamilyTertiary: Verdana;
+$fontFamilyQuaternary: sans-serif;
+
+// Typography - Font Size
+$fontSize1: 36pt;
+$fontSize2: 28pt;
+$fontSize3: 18pt;
+$fontSize4: 14pt;
+$fontSize5: 10pt;
+
+// Sizes for media queries
+$sizeQuery0: 1350px;
+$sizeQuery1: 900px;
+$sizeQuery2: 600px;
+$sizeQuery3: 400px;

@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Fira-Code';
+  src: url('/fonts/FiraCode-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Monoid';
+  src: url('/fonts/Monoid-Regular.ttf');
+}
+
+
+h1 {
+  font-family: $fontFamilyPrimary;
+  font-size: $fontSize1;
+}
+
+h2 {
+  font-family: $fontFamilyPrimary;
+  font-size: $fontSize2;
+}
+
+h3 {
+  font-family: $fontFamilySecondary;
+  font-size: $fontSize3;
+}
+
+h4 {
+  font-family: $fontFamilySecondary;
+  font-size: $fontSize4;
+}
+
+h5, h6 {
+  font-family: $fontFamilyTertiary;
+  font-size: $fontSize5;
+}
+
+li {
+  font-family: $fontFamilyPrimary;
+}
+
+input, label, span, textarea, a {
+  font-family: $fontFamilyPrimary;
+  font-size: $fontSize4;
+}
+
+p {
+  font-family: $fontFamilySecondary;
+  font-size: $fontSize4;
+}

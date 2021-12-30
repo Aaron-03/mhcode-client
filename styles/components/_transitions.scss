@@ -1,0 +1,188 @@
+// ###############################################
+// Fade effects - TOP
+// ###############################################
+.anim_transition_fade_top_in {
+  animation: anim_transition_fade_top_in 0.4s forwards ease-in;
+}
+
+.anim_transition_fade_top_out {
+  animation: anim_transition_fade_top_out 0.4s forwards ease-out;
+}
+
+// --------------------------------------------
+// Trasnsitions for Fade Top
+// --------------------------------------------
+@keyframes anim_transition_fade_top_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes anim_transition_fade_top_out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// ###############################################
+// Fade effects - LEFT
+// ###############################################
+.anim_transition_fade_left_in {
+  animation: anim_transition_fade_left_in 0.4s forwards ease-in;
+}
+
+.anim_transition_fade_left_out {
+  animation: anim_transition_fade_left_out 0.4s forwards ease-out;
+}
+// --------------------------------------------
+// Trasnsitions for Fade Left
+// --------------------------------------------
+@keyframes anim_transition_fade_left_in {
+  0% {
+    display: none;
+    transform-style: preserve-3d;
+    transform: translateX(-6em);
+    opacity: 0;
+  }
+  100% {
+    display: initial;
+    transform-style: preserve-3d;
+    transform: translateX(0em);
+    opacity: 1;
+  }
+}
+
+@keyframes anim_transition_fade_left_out {
+  0% {
+    display: initial;
+    transform-style: preserve-3d;
+    transform: translateX(0em);
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    transform-style: preserve-3d;
+    transform: translateX(-6em);
+    opacity: 0;
+  }
+}
+
+// ###############################################
+// Fade effects - RIGHT
+// ###############################################
+.anim_transition_fade_right_in {
+  animation: anim_transition_fade_right_in 0.4s forwards ease-in;
+}
+
+.anim_transition_fade_right_out {
+  animation: anim_transition_fade_right_out 0.4s forwards ease-out;
+}
+// --------------------------------------------
+// Trasnsitions for Fade Right
+// --------------------------------------------
+@keyframes anim_transition_fade_right_in {
+  0% {
+    transform-style: preserve-3d;
+    transform: initial translateX(6em);
+    opacity: 0;
+  }
+  100% {
+    transform-style: preserve-3d;
+    transform: initial translateX(0em);
+    opacity: 1;
+  }
+}
+
+@keyframes anim_transition_fade_right_out {
+  0% {
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transform: initial translateX(0em);
+    opacity: 1;
+  }
+  100% {
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transform: initial translateX(6em);
+    opacity: 0;
+  }
+}
+
+// ###############################################
+// Fade effects - SERVICE
+// ###############################################
+.anim_movement_service_in {
+  animation: anim_movement_service_in 0.4s forwards ease-out;
+}
+.anim_movement_service_out {
+  animation: anim_movement_service_out 0.4s forwards ease-out;
+}
+// --------------------------------------------
+// Trasnsitions for Service Card
+// --------------------------------------------
+@keyframes anim_movement_service_in {
+  0% {
+    transform: translateX(initial) translateY(initial);
+  }
+  100% {
+    transform: translateX(0em) translateY(0em);
+  }
+}
+
+@keyframes anim_movement_service_out {
+  0% {
+    transform: translateX(0em) translateY(0em);
+  }
+  100% {
+    transform: translateX(initial) translateY(initial);
+  }
+}
+
+// ###############################################
+// Fade effects - SERVICE
+// ###############################################
+.anim_form_contact_in {
+  animation: anim_form_contact_in 0.4s forwards ease-out;
+  animation-delay: 1.5s;
+}
+.anim_form_contact_out {
+  animation: anim_form_contact_out 0.4s forwards ease-out;
+}
+// --------------------------------------------
+// Trasnsitions for Animation Form Contact
+// --------------------------------------------
+@keyframes anim_form_contact_in {
+  0% {
+    visibility: hidden;
+    transform-style: preserve-3d;
+    transform: translateX(-6em);
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    transform-style: preserve-3d;
+    transform: translateX(0em);
+    opacity: 1;
+  }
+}
+
+@keyframes anim_form_contact_out {
+  0% {
+    visibility: visible;
+    transform-style: preserve-3d;
+    transform: translateX(0em);
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    transform-style: preserve-3d;
+    transform: translateX(6em);
+    opacity: 0;
+  }
+}

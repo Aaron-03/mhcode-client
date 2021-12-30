@@ -1,0 +1,26 @@
+.tecnologies {
+  padding: 0em 1em;
+}
+
+.tecnologies__text {
+  font-size: $fontSize4;
+  text-align: center;
+  font-style: italic;
+  color: $color1;
+  margin-bottom: 0.5em;
+}
+
+.tecnologies__images-container {
+  padding: 0.5em;
+}
+.tecnologies__images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  img {
+    height: 3em;
+    margin: 0.5em;
+  }
+}

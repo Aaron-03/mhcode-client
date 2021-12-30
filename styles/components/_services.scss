@@ -1,0 +1,82 @@
+.service__list {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-rows: repeat(3, 3fr);
+  justify-content: center;
+  // margin-top: 1em;
+
+  @include for-desktop-only {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.service__list .service__item {
+  transition: background-color 0.4s;
+  background-color: $color3;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  color: $color1;
+  padding: 0.5em;
+  max-width: 26em;
+
+  &:nth-child(1) {
+    transform: translateX(-3em) translateY(-3em);
+  }
+  &:nth-child(2) {
+    transform: translateX(3em) translateY(-3em);
+  }
+  &:nth-child(3) {
+    transform: translateX(-3em) translateY(3em);
+  }
+  &:nth-child(4) {
+    transform: translateX(3em) translateY(3em);
+  }
+}
+
+.service__item-cover {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+
+  img {
+    width: 7.5em;
+  }
+}
+
+.service__item-text {
+  padding: 0.5em;
+}
+
+.service__item-text h3 {
+  font-size: $fontSize4;
+  margin-bottom: 0.5em;
+}
+
+.service__item-text p {
+  font-size: $fontSize5;
+  font-weight: 100;
+  font-style: italic;
+  color: rgba($color: $color1, $alpha: 0.9);
+  margin-bottom: 1em;
+}
+
+$serviceColors: $color2, $color5, $color5, $color6;
+
+@for $i from 1 through length($serviceColors) {
+  $c: nth($serviceColors, $i);
+
+  .service__item.active:nth-child(#{ $i }) {
+    background-color: $c;
+  }
+
+  @if $i > 1 {
+    .service__item.active:nth-child(#{ $i }) .service__item-text h3,
+    .service__item.active:nth-child(#{ $i }) .service__item-text p {
+      color: $color4;
+    }
+  }
+}

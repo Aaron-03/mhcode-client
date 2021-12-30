@@ -1,0 +1,100 @@
+.navbar {
+  transition: all 0.4s;
+  position: fixed;
+  // background-color: $color4;
+  color: $color1;
+  width: 100%;
+  top: 4em;
+  right: 0;
+  left: 0;
+  max-height: 0;
+  overflow: hidden;
+  z-index: 100;
+
+  @include for-desktop-only {
+    position: initial;
+    max-height: 100%;
+  }
+}
+
+.navbar__list {
+  min-width: 18em;
+
+  @include for-desktop-only {
+    display: flex;
+    padding: 0.5em;
+    justify-content: flex-end;
+    align-items: center;
+    border: none;
+    height: 4em;
+  }
+}
+
+.navbar__list-item {
+  cursor: pointer;
+  font-family: $fontFamilyPrimary;
+  text-align: center;
+  background-color: rgba($color1, $alpha: 0.2);
+  margin-bottom: 0.5em;
+  border-radius: 2.5em;
+  text-transform: uppercase;
+
+  a {
+    display: inline-block;
+    padding: 0.4em;
+    width: 100%;
+    transition: color 0.4s;
+    color: $color1;
+    text-decoration: none;
+    font-size: $fontSize4;
+  }
+
+  a:hover {
+    color: $color2;
+  }
+
+  @include for-desktop-only {
+    margin: 0;
+    border-radius: 0;
+    background: none;
+  }
+}
+
+.navbar__code {
+  margin-top: 2em;
+  text-align: center;
+  p {
+    font-size: $fontSize5;
+    font-family: $fontFamilyPrimary;
+    font-style: italic;
+  }
+}
+
+// When header__burger is clicked
+.navbar.active {
+  padding: 3em 1em;
+  max-height: 100%;
+  background: $color3;
+
+  @for $i from 1 to 5 {
+    .navbar__list-item:nth-child(#{ $i }) {
+      animation: anim_navbar_item 0.2s ease-in-out forwards;
+      animation-delay: #{ "0.#{ $i }s" };
+    }
+  }
+
+  @include for-desktop-only {
+    max-height: 100%;
+    padding: 0em 1em;
+  }
+}
+
+@keyframes anim_navbar_item {
+  0% {
+    transform: translateY(-15px);
+    box-shadow: 0px 2px 1px 2px rgba(white, $alpha: 0.2);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,33 @@
+.footer {
+  background-color: $color2;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+.footer__text {
+  text-align: center;
+  font-size: $fontSize5;
+  color: $color1;
+}
+
+.footer__social {
+  text-align: center;
+
+  img {
+    border-radius: 8px;
+  }
+
+  // img:nth-child(1) {
+  //   background-color: #0e76a8;
+  // }
+
+  // img:nth-child(2) {
+  //   margin: 0 0.5em;
+  //   background-color: #3b5998;
+  // }
+
+  // img:nth-child(3) {
+  //   margin: 0 0.5em;
+  //   background-color: #c4302b;
+  // }
+}

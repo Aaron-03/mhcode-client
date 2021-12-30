@@ -1,0 +1,35 @@
+.btn {
+  cursor: pointer;
+  border: 2px solid $color3;
+  color: $color1;
+  background-color: $color2;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-primary {
+  color: $color1;
+  background-color: $color2;
+}
+
+.btn-secondary {
+  color: $color4;
+  background-color: $color5;
+}
+
+.btn-tertiary {
+  color: $color4;
+  background-color: $color6;
+}
+
+.btn-light {
+  color: $color4;
+  background-color: $color1;
+}
+
+.btn-dark {
+  color: $color1;
+  background-color: $color3;
+}

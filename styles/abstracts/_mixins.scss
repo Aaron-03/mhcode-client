@@ -1,0 +1,11 @@
+@mixin for-desktop-large-only {
+  @media (min-width: $sizeQuery0) { @content; }
+}
+
+@mixin for-desktop-only {
+  @media (min-width: $sizeQuery1) { @content; }
+}
+
+@mixin for-tablet-only {
+  @media (min-width: $sizeQuery2) { @content; }
+}

@@ -1,0 +1,340 @@
+// Container General
+.container__general {
+  position: relative;
+  background-color: $color4;
+}
+
+.container__general .container__section:nth-child(2) {
+  flex-direction: column;
+  margin-bottom: 0em;
+  justify-content: center;
+
+  @include for-desktop-only {
+    flex-direction: row;
+    // margin-bottom: 10em;
+  }
+
+  @include for-desktop-large-only {
+    justify-content: space-between;
+  }
+}
+
+.loader__coffee {
+  position: absolute;
+  left: -1em;
+  bottom: -1em;
+  height: 2em;
+  width: 5%;
+  background: linear-gradient(to right, $color1, $color2);
+  border-radius: 1em;
+
+  &-content {
+    overflow: hidden;
+    position: absolute;
+    top: -1.5em;
+    right: -3em;
+    display: flex;
+    justify-content: center;
+    background-color: $color1;
+    border-radius: 2.5em;
+    border: 0.25em solid $color2;
+    width: 5em;
+    height: 5em;
+  }
+}
+
+// Cover container
+.cover {
+  position: relative;
+  background-color: $color3;
+  background: linear-gradient(to top, $color3, $color4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2em;
+  min-height: calc(100vh - 8em);
+}
+
+.cover__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('/images/texture_2.jpg');
+  background-attachment: fixed;
+  opacity: 0.5;
+}
+
+.section__description {
+  margin-top: 1em;
+  color: $color1;
+  font-size: $fontSize5;
+  font-style: italic;
+  font-weight: 100;
+
+  @include for-desktop-only {
+    position: relative;
+    text-align: left;
+    max-width: 20em;
+    margin: auto;
+    margin-top: 1em;
+    font-size: $fontSize4;
+    border-radius: 0.25em;
+    padding: 2em;
+    background-color: $bgColor1;
+
+    &::before {
+      position: absolute;
+      top: 0.5em;
+      bottom: 0;
+      left: 1em;
+      content: '';
+      width: 0.2em;
+      height: 90%;
+      background-color: $color2;
+      border-radius: 0.5em;
+    }
+  }
+}
+
+.cover__content {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  padding: 2em 0.5em;
+  width: 100%;
+  z-index: 10;
+
+  .cover__text {
+    padding: 2em;
+    border-radius: 1em;
+    // background-color: rgba($color: $color4, $alpha: 1);
+    // box-shadow: 1px 5px 5px 2px rgba($color: black, $alpha: 0.25);
+  }
+
+  img {
+    margin-top: 2em;
+  }
+
+  @include for-desktop-only {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6em;
+  }
+}
+
+// For animations
+#cover__anim {
+  transform: translateY(-2.5em);
+
+  @include for-desktop-only {
+    width: 32em;
+    transform: translateY(0em);
+  }
+}
+
+#cover__anim-coffee {
+  width: 6em;
+  transform: scale(1.5);
+}
+
+.cover__text h2.cover__content-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1em;
+
+  span {
+    display: inline-block;
+    font-size: $fontSize1;
+    font-family: 'Fira-Code';
+  }
+
+  p {
+    // overflow: hidden;
+  }
+
+  p span:nth-child(1) {
+    transition: all 0.4s;
+    color: $color1;
+    margin-right: 0.1em;
+  }
+
+  p span:nth-child(2) {
+    color: $color1;
+    transform-style: preserve-3d;
+    background: linear-gradient(0deg, $color5, $color1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: anim_title_text 3s infinite alternate-reverse;
+    // animation: anim_text 3s infinite alternate-reverse;
+    width: 2em;
+  }
+
+  > span:nth-child(1),
+  > span:nth-child(3) {
+    color: $color2;
+    margin: 0 0.5em;
+  }
+
+  @include for-desktop-only {
+    span {
+      font-size: 54pt;
+    }
+  }
+}
+
+.cover__wave {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  @include for-desktop-only {
+    bottom: 0;
+  }
+}
+
+// Section container
+.container__section {
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70em;
+  margin: initial auto;
+  padding-top: 6em;
+  overflow: hidden;
+
+  @include for-tablet-only {
+    max-width: 60em;
+  }
+
+  @include for-desktop-only {
+    margin: initial auto;
+    padding-top: 10em;
+    max-width: 70em;
+  }
+}
+
+#contact.container__section {
+  overflow: initial;
+}
+
+.section__subtitle {
+  text-align: center;
+  // margin-top: 4em;
+  margin-bottom: 2.5em;
+
+  &-text {
+    color: $color2;
+    font-size: $fontSize3;
+    text-align: center;
+
+    @include for-tablet-only {
+      font-size: $fontSize2;
+    }
+  }
+  
+  &-lines {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &-lines span {
+    width: 45%;
+    height: 4px;
+    border-radius: 25px;
+    background-color: $color2;
+  }
+
+  &-lines img {
+    margin: initial 1em;
+  }
+}
+
+.cover__phrase {
+  position: absolute;
+  color: $color1;
+  left: 0;
+  right: 0;
+  bottom: 6em;
+  font-size: $fontSize5;
+  text-align: center;
+
+  @include for-desktop-only {
+    font-size: $fontSize4;
+    bottom: 8em;
+  }
+}
+
+// Container card
+.container__card {
+  padding: 2em;
+}
+
+
+@keyframes anim_title_text {
+  from {
+    transform: translateX(0px);
+    -webkit-filter: hue-rotate(92deg);
+  }
+  to {
+    transform: translateX(25px);
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+@keyframes anim_text {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(36deg) rotateY(15deg);
+  }
+}
+
+
+.block__section-1 {
+  @include for-desktop-only {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.block__section {
+  @include for-desktop-only {
+    max-width: 65em;
+    margin: initial auto;
+  }
+}
+
+.block__section-4 {
+  
+  @include for-desktop-only {
+    max-width: 100%;
+    section {
+      max-width: 50em;
+      margin: initial auto;
+    }
+  }
+}
+
+body {
+  position: relative;
+  background-color: rgba($color: $color4, $alpha: 1.0);
+}
+
+.background__stars {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('https://img1.picmix.com/output/stamp/normal/6/0/1/6/1556106_f227e.gif');
+  background-position: center;
+  z-index: -10;
+  opacity: 0.2;
+}
