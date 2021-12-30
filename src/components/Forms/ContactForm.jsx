@@ -53,8 +53,8 @@ const ContactForm = () => {
           />
 
           <ContactInput
-            lblName='Tu nombre'
-            name='name'
+            lblName='Mensaje'
+            name='message'
             type='textarea'
             data={ data }
             handleChange={ handleChange }

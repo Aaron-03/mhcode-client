@@ -218,6 +218,18 @@
   }
 }
 
+#container__section.container__section {
+  @include for-tablet-only {
+    overflow: initial;
+  }
+
+  #card__info {
+    @include for-tablet-only {
+      margin-left: 2em;
+    }
+  }
+}
+
 #contact.container__section {
   overflow: initial;
 }
